@@ -1,9 +1,9 @@
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
+1.set args
+2.b breakpoint
+3.s step
+4.n next
+5.c continue
+6.p print
+7.w watch/d display
+8.info locals
+9.q quit
