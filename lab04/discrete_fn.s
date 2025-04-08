@@ -77,7 +77,10 @@ main:
 # Think: why might having a1 be useful?
 f:
     # YOUR CODE GOES HERE!
-
+    addi t0, a0, 3    # 计算数组索引：x + 3（将 -3~3 映射到 0~6）
+    slli t0, t0, 2    # 索引转字节偏移：乘以 4（每个元素占 4 字节）
+    add t0, a1, t0    # 计算数组元素地址：基地址 + 偏移
+    lw a0, 0(t0)      # 加载数组元素值到返回值寄存器 a0
     jr ra               # Always remember to jr ra after your function!
 
 print_int:
